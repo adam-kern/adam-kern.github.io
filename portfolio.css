@@ -1,0 +1,180 @@
+nav {
+    float: none;
+    text-align: center;
+    position: relative;
+    background-color: white;
+    opacity: .6;
+    padding: 1em;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 20px;
+    font-size: 2em;
+    font-weight: 400;
+    color: black;
+    
+}
+
+nav a:hover{
+    cursor: pointer;
+    background-color: white;
+    font-size: 2.em;
+    text-decoration: underline;
+    color: red;
+}   
+
+p {
+    font-size: 2em;
+}
+
+h5 {
+    color: black;
+    font-size: 3em;
+}
+
+h6 {
+    color: black;
+    font-size: 2em;
+}
+
+.title {
+   height: auto;
+   padding-top: 3em;
+   align-content: center;
+   padding-top: 10%;
+   align-content: center;
+   text-align: center;
+   background:
+    linear-gradient(
+        rgba(0, 51, 153, 0.30), 
+        rgba(1, 4, 8, 0.3)
+      ),
+    url("assets/desert.jpg");
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   color: whitesmoke;   
+}
+
+#camel {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height: 75%
+}
+
+.btn-danger{
+    height: 4em;
+    width: 10em;
+    margin: 2em;
+}
+
+#adam {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-top: 2em;
+}
+
+@media screen and (max-width: 705px) {
+    #adam {
+        display: none;
+    }
+
+    #desktopBio {
+        display: none;
+    }
+
+    #mobileBio {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 705px) {
+    #mobileBio {
+        display: none;
+    }
+}
+
+article {
+    text-align: center;
+    margin: .5em;
+}
+
+#knowMe {
+    text-align: center;
+    margin: 1em;
+}
+
+#resume {
+    height: 10em;
+    width: 10em;
+}
+
+#projectSection {
+    height: 60%;
+    background-color: #D24D57;
+    padding: 1em;
+    text-align: center;
+}
+
+#projects {
+    height: 55%;
+    width: 55%;
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+#contact {
+    text-align: center; 
+    margin: 3em;  
+}
+
+.btn-outline-danger {
+    height: 5em;
+    width: 15em;
+}
+
+.socials {
+    align-content: center;
+    text-align: center;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+  
+.fa:hover {
+    opacity: 0.7;
+}
+  
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+  
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-github {
+    background: #24292E;
+    color: white;
+}
+    
