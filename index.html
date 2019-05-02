@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="shortcut icon" type="image/png" href="assets/adam.png"/>
 </head>
 <body>
@@ -42,35 +43,23 @@
             </div>
         </div>
         <div class='row' id='desktopBio'>
-            <div class='col-6'>
-                <a href="assets/Adam Kern's Resume.pdf" target="_blank">
+          <div id='bio' class='col-md-6'>
+            <p>Hi, my name is Adam Kern and I am a developer, marketer and public relations specialist living in Indianapolis, Indiana.</p> 
+            <br>
+            <p>I enjoy reading, designing websites, hiking and craft beer.</p>
+            <br>    
+            <p>I would like to use my knowlege and abilities to make a difference for your comapany. Please click the icon to view my resume.</p>
+            <br>
+            <a href="assets/Adam Kern's Resume.pdf" target="_blank">
+            <img id="resume" src="assets/resumeIcon.png" alt="">
+            </a>
+          </div>
+          <div class='col-md-6'>
+            <a href="assets/Adam Kern's Resume.pdf" target="_blank">
                     <img id='adam' src="assets/adam.png" alt="">
-                    </a>
-                </div>
-            <div id='bio' class='col-6'>
-                <p>Hi, my name is Adam Kern and I am a developer, marketer and public relations specialist living in Indianapolis, Indiana.</p> 
-                <br>
-                <p>I enjoy reading, designing websites, hiking and craft beer.</p>
-                <br>    
-                <p>I would like to use my knowlege and abilities to make a difference for your comapany. Please click the icon to view my resume.</p>
-                <br>
-                <a href="assets/Adam Kern's Resume.pdf" target="_blank">
-                <img id="resume" src="assets/resumeIcon.png" alt="">
-                </a>
-            </div>
+            </a>
+          </div>
         </div>
-        <div class='row' id='mobileBio'>
-                <div id='bio' class='col-12'>
-                    <p>Hi, my name is Adam Kern and I am a developer, marketer and public relations specialist living in Indianapolis, Indiana.</p> 
-                    <br>
-                    <p>I enjoy reading, designing websites, hiking and craft beer.</p>
-                    <br>    
-                    <p>I would like to use my knowlege and abilities to make a difference for your company. Please click the icon to view my resume.</p>
-                    <br>
-                    <a href="assets/Adam Kern's Resume.pdf" target="_blank">
-                    <img id="resume" src="assets/resumeIcon.png" alt="">
-                    </a>
-                 </div>
         </div>
     </article>
 
@@ -103,10 +92,12 @@
                   </div>
                 </div>
                 <div class="carousel-item">
+                  <a href="https://codepen.io/adam-kern/full/ROjxwP" target="_blank">
                   <img src="assets/indy.MediaQuerry.jpg" target="_blank" class="d-block w-100" alt="...">
+                  </a>
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Media Queries</h5>
-                    <h6>Basic webiste that demonstrates understanding of media queries.</p>
+                    <h6>Basic website that demonstrates understanding of media queries.</p>
                   </div>
                 </div>
               </div>
@@ -124,11 +115,48 @@
 
     <div id='contact'>
         <h1>Let's Work Together</h1>
-        <h3>If you like what you see and need help improving the brand of your business, just send me an email or contact me through a social site linked below.</h3>
-        <br>
-        <a href="mailto:adam31kern@gmail.com" target="_blank">
-        <button type="button" class="btn btn-outline-danger">Contact Me</button>
-        </a>
+        <h3>If you like what you see and need help improving the brand of your business, just send me an email or contact me through a social media site below.</h3>
+        <section id="contact">
+          <div class="container">
+            <br>
+            <br>
+            <h2 class="text-center text-uppercase">Contact Me</h2>
+            <div class="row">
+              <div class="col-12">
+                <form action="https://formspree.io/adam31kern@gmail.com" method="POST">
+                  <div class="control-group">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Your Name" id="name" required
+                        data-validation-required-message="Please enter your name" name="name">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <div class="form-group">
+                      <input type="email" class="form-control" placeholder="Your Email" id="email" required
+                        data-validation-required-message="Please enter your email" name="_replyto">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <div class="form-group">
+                      <textarea class="form-control" rows="7" placeholder="Your Message" id="message" required
+                        data-validation-required-message="Please leave a message" name="message"></textarea>
+                      <p class="help-block text-danger"></p>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <div id="success"></div>
+                    <button type="submit" class="formButton btn btn-lg btn-black">
+                      <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                      Send
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
     </div>
 
     </div>
