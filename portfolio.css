@@ -5,14 +5,16 @@ nav {
     background-color: white;
     opacity: .6;
     padding: 1em;
+    font-family: 'Roboto', sans-serif;
 }
 
 nav a {
     text-decoration: none;
     margin: 20px;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 400;
     color: black;
+    font-family: 'Roboto', sans-serif;
     
 }
 
@@ -22,20 +24,24 @@ nav a:hover{
     font-size: 2.em;
     text-decoration: underline;
     color: #d24d57;
+    font-family: 'Roboto', sans-serif;
 }   
 
 p {
     font-size: 2em;
+    font-family: 'Roboto', sans-serif;
 }
 
 h5 {
     color: black;
     font-size: 3em;
+    font-family: 'Roboto', sans-serif;
 }
 
 h6 {
     color: black;
     font-size: 2em;
+    font-family: 'Roboto', sans-serif;
 }
 
 .title {
@@ -54,6 +60,8 @@ h6 {
    background-repeat: no-repeat;
    background-attachment: fixed;
    color: whitesmoke;   
+   font-family: 'Roboto', sans-serif;
+   text-emphasis-style: bold;
 }
 
 #camel {
@@ -86,12 +94,30 @@ article {
 #knowMe {
     text-align: center;
     margin: 1em;
+    font-family: 'Roboto', sans-serif;
+}
+
+#desktopBio {
+    padding-bottom: 1em;
+}
+
+#bio {
+    padding-left: 3em;
 }
 
 #resume {
     height: 10em;
     width: 10em;
-    padding-bottom: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.resumeSection {
+    width: 15em;
+    border-radius: 25px;
+    background-color: #24292E;
+    justify-content: center;
+    display: inline-block;
 }
 
 #projectSection {
@@ -99,22 +125,42 @@ article {
     background-color: #D24D57;
     padding: 1em;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 #projects {
-    height: 55%;
-    width: 55%;
+    height: 59%;
+    width: 59%;
     justify-content: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding-top: 5em;
     padding-bottom: 5em;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+#stocks {
+    opacity: 0.6;
+}
+
+#tutorial {
+    opacity: 0.7;
+}
+
+#creature {
+    opacity: 0.7;
+}
+
+#queries {
+    opacity: 0.7;
 }
 
 #contact {
     text-align: center; 
     margin: 3em;  
+    font-family: 'Roboto', sans-serif;
 }
 
 .btn-outline-danger {
@@ -161,3 +207,8 @@ article {
     color: white;
 }
     
+@media only screen and (max-width: 600px) {
+    #bio {
+      padding-left: 1em;
+    }
+  }
