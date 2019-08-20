@@ -96,6 +96,7 @@ article {
     text-align: center;
     margin: 1em;
     font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
 #desktopBio {
@@ -104,6 +105,7 @@ article {
 
 #bio {
     padding-right: 4em;
+    text-align: left
 }
 
 #resume {
@@ -117,8 +119,9 @@ article {
     width: 15em;
     border-radius: 25px;
     background-color: #24292E;
-    justify-content: center;
+    text-align: center;
     display: inline-block;
+    justify-content: center;
 }
 
 #projectSection {
@@ -209,6 +212,10 @@ article {
 }
     
 @media only screen and (max-width: 600px) {
+    #nav {
+        text-align: left;
+    }
+
     #bio {
       padding-left: 1em;
     }
