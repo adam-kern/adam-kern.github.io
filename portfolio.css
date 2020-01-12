@@ -140,27 +140,11 @@ article {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 5em;
-    padding-bottom: 5em;
+    padding-top: 3em;
     font-family: 'Roboto', sans-serif;
     color: white;
 }
 
-#stocks {
-    opacity: 0.6;
-}
-
-#tutorial {
-    opacity: 0.7;
-}
-
-#creature {
-    opacity: 0.7;
-}
-
-#queries {
-    opacity: 0.7;
-}
 
 #contact {
     text-align: center; 
