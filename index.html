@@ -6,75 +6,122 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Adam's Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="portfolio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:600" rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="assets/adam.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Meddon&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <nav>
-    <a href="#knowMe">ABOUT</a>
-    <a href="#projectSection">PROJECTS</a>
-    <a href="assets/Kern Resume.pdf" target="_blank">RESUME</a>
-    <a href="mailto:adam31kern@gmail.com" target="_blank">CONTACT</a>
-  </nav>
-  
+  <!-- navigation -->
+  <div id=menu>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <ul class="nav">
+          <li><a id="len1" class="hoverable" href="#aboutSection">ABOUT</a></li>
+          <li><a id="len2" class="hoverable" href="#projectSection">PROJECTS</a></li>
+          <li><a id="len3" class="hoverable" href="assets/Kern Resume.pdf" target="_blank">RESUME</a></li>
+          <li><a id="len4" class="hoverable" href="mailto:adam31kern@gmail.com" target="_blank">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+    </div>
 
+    <!-- header -->
   <header class='title'>
     <div id=titleRow class='row background'>
-      <div class='col-8'>
-        <h1 font-size='5em'>Adam Kern</h1>
-        <h2>Salesforce Professional | Developer</h2>
+      <div class='col-6' id='info'>
+        <h1 id="signature">Adam Kern</h1>
+        <h2 id="jobtitle">Certified Salesforce Administrator | Digital Consultant</h2>
         <br>
-        <a href="#projectSection">
-          <button type="button" class="btn btn-danger">View My Work</button>
-        </a>
+        <a href="#projectSection"><button type="button" class="btn btn-danger">View My Work</button></a>
         <br>
       </div>
-      <div class='col-4 profilepic'>
-        <img id='camel' src="assets/camel.png" alt="Adam riding camel">
+      <div class='col-6'>
+        <img id='adamphoto' src="assets/akern.png" alt="Adam Kern">
       </div>
     </div>
   </header>
 
-  <article>
-    <div class='row'>
-      <div class='col-12'>
-        <h1 id='knowMe'>Getting To Know Me:</h1>
+  <!-- About -->
+  <article id=aboutSection>
+    <div id=intro>
+      <bR>
+        <br>
+      <h1>GETTING TO KNOW ME:</h1>
+      <br>
+      <p>Hi, my name is Adam Kern and I am a Salesforce Administrator and aspiring Developer living in Indianapolis, Indiana.
+        <br>
+        <br>
+        I enjoy reading the great books, designing websites, hiking and exploring craft breweries.
+        <br>
+        <br>
+        I would like to use my knowledge and abilities to make a difference for your company.</p>
+        <br>
+        <br>
       </div>
-    </div>
-    <div class='row' id='desktopBio'>
-      <div class='col-md-6'>
-        <a href="assets/Kern Resume.pdf" target="_blank">
-          <img id='adam' src="assets/akern.png" alt="">
-        </a>
-      </div>
-      <div id='bio' class='col-md-6'>
-        <p>Hi, my name is Adam Kern and I am a Salesforce Administrator and aspiring Developer living in
-          Indianapolis, Indiana.</p>
-        <br>
-        <p>I enjoy reading the great books, designing websites, hiking and trying new beers.</p>
-        <br>
-        <p>I would like to use my knowledge and abilities to make a difference for your company. Please click the icon
-          to view my resume.</p>
-        <br>
-        <div class='resumeSection'>
-          <a href="assets/Kern Resume.pdf" target="_blank">
-            <img id="resume" src="assets/resumeIcon.png" alt="">
-          </a>
+        <div class="card-deck">
+          <div class="card">
+            <img class="card-img-top" src="assets/sflogo.png" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text"> Salesforce Pathfinder</p>
+              <p class="card-text"><small class="text-muted">Learned from Salesforce and Deloitte professionals to succeed in the Salesforce ecosystem.</small></p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="assets/eleven fifty.png" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">Eleven Fifty Acadmey</p>
+              <p class="card-text"><small class="text-muted">Participated in a 6 month Javascript programming lanaguage bootcamp.</small></p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="assets/First-internet-Bank-Logo_Supplied_250x250.png" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">First Internet Bank</p>
+              <p class="card-text"><small class="text-muted">Certified Salesforce Admin at FIBank specializing in nCino, a bank operating system built on the Salesforce OS.</small></p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    </div>
+        <br>
+        <div class="card-deck">
+          <div class="card">
+            <img class="card-img-top" src="assets/hillsdale.png" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">Hillsdale College</p>
+              <p class="card-text"><small class="text-muted">Proud graduate of Hillsdale College, double majoring in American Studies and Spanish. Member of the Sigma Chi Fraternity.</small></p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="assets/camel.png" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">International Traveler</p>
+              <p class="card-text"><small class="text-muted">Traveled to NYC, Israel, and Jordan through the Philos Project Leadersip Program to encourage positive engagement in the Middle East. Frequently traveled to Valladolid, Mexico as a medical translator. </small></p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="assets/eaglescout.jpg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">Eagle Scout</p>
+              <p class="card-text"><small class="text-muted">Earned Scouting's highest honor. Revitalized a rundown courtyard at a homeless shelter in downtown Indianapolis.</small></p>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
   </article>
 
+
+
+
+<!-- Projects -->
   <section id="projectSection">
     <bR>
-    <h1>My Projects:</h1>
+    <h1 style="font-weight:600; color: whitesmoke;">MY PORTFOLIO:</h1>
     <div id="projects">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -114,23 +161,21 @@
             </a>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
     </div>
   </section>
+  
 
+
+  <!-- Contact -->
   <div id='contact'>
+    <br>
+    <br>
+    <div>
     <h1>Let's Work Together</h1>
     <h3>If you like what you see and need help improving your business, just send me an email or contact me
       through a social media site below.</h3>
-    <section id="contact">
+    <section>
       <div class="container">
         <br>
         <br>
@@ -161,7 +206,7 @@
               </div>
               <div class="text-center">
                 <div id="success"></div>
-                <button type="submit" class="formButton btn btn-lg btn-black">
+                <button type="submit" class="formButton btn btn-danger">
                   <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
                   Send
                 </button>
@@ -172,9 +217,9 @@
       </div>
     </section>
   </div>
-
   </div>
 
+  <!-- Socials -->
   <footer>
     <div class='socials'>
       <a href="https://www.facebook.com/adam31kern" target="_blank" class="fa fa-facebook"></a>
@@ -193,6 +238,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-</body>
+  <script src="main.js" type='text/javascript'></script>
 
+</body>
 </html>

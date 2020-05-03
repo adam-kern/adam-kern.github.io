@@ -1,32 +1,116 @@
-nav {
-    float: none;
-    text-align: center;
+/* Navigation */
+.hoverable {
+    display: inline-block;
     position: relative;
-    background-color: white;
-    opacity: .6;
-    padding: 1em;
-    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  
+  .hoverable:before {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+  
+  }
+  
+  .hoverable:hover, .hoverable:active, .hoverable:focus{
+      transform: translateY(-5px);
+    }
+  .hoverable:hover:before, .hoverable:active:before, .hoverable:focus:before {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+  
+  @keyframes bounce-animation {
+    16.65% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+    33.3% {
+      -webkit-transform: translateY(-6px);
+      transform: translateY(-6px);
+    }
+    49.95% {
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px);
+    }
+    66.6% {
+      -webkit-transform: translateY(-2px);
+      transform: translateY(-2px);
+    }
+    83.25% {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+  .bounce {
+    animation-name: bounce-animation;
+    animation-duration: 2s;
+  }
+  
+  
+  @media (min-width: 768px) {
+    .navbar {
+      text-align: center !important;
+      float: none;
+      display: inline-block;
+      font-size: x-large;
+      font-weight: 600;
+      background-color: #202124;
+    }
+    a {
+        color: #D24D57;
+    }
+  }
+  
+  @media (max-width: 768px) {
+      .nav {
+          display: inline-block;
+      }
+      .navbar {
+        text-align: center !important;
+          display: inline-block;
+          font-size: small;
+          font-weight: 600;
+          background-color: #202124;
+      }
+      a {
+          color: #D24D57;
+      }
+    }
+  
+  #menu {
+      background-color: #202124;
+      text-align: center !important;
+  }
+  
+  nav li {
+    margin-left: 4em;
+    margin-right: 4em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+  }
+  
+  nav li a {
+    transition: .5s color ease-in-out;
+  }
+  
+
+
+/* General */
+body {
+    width: 100%;
 }
-
-nav a {
-    text-decoration: none;
-    margin: 20px;
-    font-size: 1.8em;
-    font-weight: 400;
-    color: black;
-    font-family: 'Roboto', sans-serif;
-    
-}
-
-nav a:hover{
-    cursor: pointer;
-    background-color: white;
-    font-size: 2.em;
-    text-decoration: underline;
-    color: #d24d57;
-    font-family: 'Roboto', sans-serif;
-}   
-
 p {
     font-size: 2em;
     font-family: 'Roboto', sans-serif;
@@ -44,87 +128,145 @@ h6 {
     font-family: 'Roboto', sans-serif;
 }
 
-.title {
-   height: auto;
-   padding-top: 3em;
-   align-content: center;
-   padding-top: 10%;
-   align-content: center;
-   text-align: center;
-   background:
-    linear-gradient(
-        rgba(0, 51, 153, 0.30), 
-        rgba(1, 4, 8, 0.3)
-      ),
-    url("assets/desert.jpg");
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   color: whitesmoke;   
-   font-family: 'Roboto', sans-serif;
-   text-emphasis-style: bold;
+
+/* Header */
+@media (min-width: 768px) {
+    .title {
+        height: 92vh;
+        align-content: center;
+        padding-top: 6%;
+    
+        align-content: center;
+        text-align: center;
+        background:
+        linear-gradient(
+            rgba(0, 51, 153, 0.30), 
+            rgba(1, 4, 8, 0.3)
+        ),
+        url("assets/desert.jpg");
+        background-repeat: no-repeat;
+        color: whitesmoke;   
+        font-family: 'Roboto', sans-serif;
+        text-emphasis-style: bold;
+    }
+
+    #info {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        padding-left: 10%;
+        height: 90vh;
+    }
+
+    #signature {
+        font-family: 'meddon';
+        font-size: 10vh;
+    }
+    
+    #jobtitle {
+        font-size: 5vh;
+    }
+    
+    .btn-danger{
+        height: 15%;
+        width: 30%;
+        margin: 5%;
+    }
+
+    #adamphoto {
+        width: 58%;
+        height: 58%;
+        animation-name: slideInRight;
+        animation-duration: 2s;
+    }     
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+        height: 78vh;
+        padding-top: 20%;
+        align-content: center;
+        text-align: center;
+        background:
+         linear-gradient(
+             rgba(0, 51, 153, 0.30), 
+             rgba(1, 4, 8, 0.3)
+           ),
+         url("assets/desert.jpg");
+        background-repeat: no-repeat;
+        color: whitesmoke;   
+        font-family: 'Roboto', sans-serif;
+        text-emphasis-style: bold;
+     }
+
+    #info {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 20%;
+        padding-bottom: 5%;
+        padding-left: 10%;
+        height: 60vh;
+    }
+    #signature {
+        font-family: 'meddon';
+        font-size: 5vh;
+    }
+    
+    #jobtitle {
+        font-size: 2vh;
+    }
+    
+    .btn-danger{
+        height: 10vh;
+        width: 15vh;
+        margin: 5%;
+    }
+
+    #adamphoto {
+        width: 90%;
+        height: 90%;
+        animation-name: slideInRight;
+        animation-duration: 2s;
+    }  
 }
 
-#camel {
+/* About */
+#aboutSection {
+background-color: #202124;
+}
+
+#intro {
+    color: whitesmoke;
+    text-align: center;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.card-img-top {
+    height: 30%;
+    width: 30%;
+    margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
-    width: 75%;
-    height: 75%;
-    animation-name: slideInRight;
-    animation-duration: 3s;
-}    
-
-.btn-danger{
-    height: 4em;
-    width: 10em;
-    margin: 2em;
 }
 
-#adam {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    position: relative;
+.card-deck {
+    margin-left: 4em;
+    margin-right: 4em;
 }
 
-article {
+.card {
+    background-color: whitesmoke;
+}
+
+.card-text {
+    line-height: 1em;
     text-align: center;
-    margin: .5em;
-    height: 100%;
 }
 
-#knowMe {
-    text-align: center;
-    margin: 1em;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-}
 
-#desktopBio {
-    padding-bottom: 1em;
-}
-
-#bio {
-    padding-right: 4em;
-    text-align: left;
-    position: relative;
-}
-
-#resume {
-    height: 10em;
-    width: 10em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-
-.resumeSection {
-    width: 15em;
-    border-radius: 25px;
-    background-color: #24292E;
-    text-align: center;
-    display: inline-block;
-    justify-content: center;
-}
-
+/* Projects */
 #projectSection {
     height: 100vh;
     background-color: #D24D57;
@@ -134,8 +276,7 @@ article {
 }
 
 #projects {
-    height: 90vh;
-    width: 90vh;
+    width: 45%;
     justify-content: center;
     display: block;
     margin-left: auto;
@@ -145,16 +286,40 @@ article {
     color: white;
 }
 
-
-#contact {
-    text-align: center; 
-    margin: 3em;  
-    font-family: 'Roboto', sans-serif;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
 }
 
-.btn-outline-danger {
-    height: 5em;
-    width: 15em;
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: red;
+}
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: red;
+}
+
+
+
+/* Contact */
+#contact {
+    text-align: center;  
+    font-family: 'Roboto', sans-serif;
+    background-color: #202124;
+    color: whitesmoke;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+
+/* Socials */
+footer {
+    background-color: #202124;
+    padding-bottom: 1em;
 }
 
 .socials {
@@ -197,31 +362,6 @@ article {
 }
     
 @media only screen and (max-width: 600px) {
-    nav {
-        float: none;
-        text-align: left;   
-        display: inline-block;
-        position: relative;
-        background-color: white;
-        opacity: .6;
-        padding: .5em;
-        font-family: 'Roboto', sans-serif;
-        white-space: wrap;
-    }
-
-    #camel {
-        height: 100%;
-        width: 100%;
-    }
-
-    h2 {
-        padding-left: 1em;
-    }
-
-    #bio {
-      padding-left: 1em;
-    }
-
     #projectSection {
         height: 100%;
         background-color: #D24D57;
@@ -243,5 +383,4 @@ article {
         font-family: 'Roboto', sans-serif;
         color: white;
     }
-    
   }
